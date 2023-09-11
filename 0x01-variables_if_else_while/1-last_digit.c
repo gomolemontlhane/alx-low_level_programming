@@ -7,9 +7,10 @@
 /**
  * main - Entry point of the program
  *
- * description: Program checks last digit n is =0, <5 , or >6 !=0
+ * Description: This program generates a random integer and
+ *              determines the properties of its last digit.
  *
- * Return - 0 if successful, otherwise an error code
+ * Return: 0 if successful, otherwise an error code
  */
 
 int main(void)
