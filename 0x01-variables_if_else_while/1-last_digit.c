@@ -2,11 +2,21 @@
 #include <time.h>
 /* more headers goes there */
 #include <stdio.h>
+
 /* betty style doc for function main goes there */
+/**
+ * main - Entry point of the program
+ *
+ * description: Program checks last digit n is =0, <5 , or >6 !=0
+ *
+ * Return - 0 if successful, otherwise an error code
+ */
+
 int main(void)
 {
 	int n;
 	int last_digit;
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
