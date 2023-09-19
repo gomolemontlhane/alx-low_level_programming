@@ -12,12 +12,6 @@ void puts2(char *str)
 	{
 		_putchar(str[i]);
 		i += 2;
-
-		/* Check for null terminator and break */
-		if (str[i] == '\0')
-		{
-			break;
-		}
 	}
 
 	_putchar('\n');
