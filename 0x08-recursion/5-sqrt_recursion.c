@@ -10,6 +10,8 @@
  */
 int sqrt_recursive(int n, int guess)
 {
+	int next_guess;
+
 	if (guess * guess == n) /* Base case: Found the exact square root */
 		return (guess);
 
@@ -17,7 +19,7 @@ int sqrt_recursive(int n, int guess)
 		return (-1);
 
 	/* Calculate the next guess */
-	int next_guess = guess + 1;
+	next_guess = guess + 1;
 
 	return (sqrt_recursive(n, next_guess));
 }
