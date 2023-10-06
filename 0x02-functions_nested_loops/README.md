@@ -13,11 +13,12 @@ This repository contains C programs showcasing the use of functions and nested l
   gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 0-putchar.c -o 0-putchar
   ./0-putchar
 
-1-alphabet.c
-Prints the alphabet in lowercase, followed by a new line, using the _putchar function.
+### 1-alphabet.c
+- Prints the alphabet in lowercase, followed by a new line, using the _putchar function.
 Limited to using _putchar only twice.
 
-Compile and run:
+- Compile and run:
+```bash
 gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 1-main.c 1-alphabet.c -o 1-alphabet
 ./1-alphabet
 
@@ -25,6 +26,7 @@ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 1-main.c 1-alphabet.c 
 Prints the alphabet in lowercase 10 times, each followed by a new line.
 Limited to using _putchar only twice.
 Compile and run:
+```bash
 gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 2-main.c 2-print_alphabet_x10.c -o 2-alphabet_x10
 ./2-alphabet_x10
 
@@ -32,6 +34,7 @@ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 2-main.c 2-print_alpha
 - Function that checks if a character is lowercase.
 Returns 1 if true, 0 otherwise.
 - Compile and run:
+```bash
 gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 3-main.c 3-islower.c -o 3-islower
 ./3-islower
 
