@@ -27,9 +27,10 @@ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 1-main.c 1-alphabet.c 
 Prints the alphabet in lowercase 10 times, each followed by a new line.
 Limited to using _putchar only twice.
 Compile and run:
-
+```bash
 gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 2-main.c 2-print_alphabet_x10.c -o 2-alphabet_x10
 ./2-alphabet_x10
+```
 
 ### 3-islower.c
 - Function that checks if a character is lowercase.
