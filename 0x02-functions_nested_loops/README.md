@@ -13,6 +13,7 @@ This repository contains C programs showcasing the use of functions and nested l
   gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 0-putchar.c -o 0-putchar
   ./0-putchar
 ```
+
 ### 1-alphabet.c
 - Prints the alphabet in lowercase, followed by a new line, using the _putchar function.
 Limited to using _putchar only twice.
