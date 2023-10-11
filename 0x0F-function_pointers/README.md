@@ -7,8 +7,9 @@ This repository contains solutions for tasks related to function pointers in the
 
 1. **0-print_name.c**
    - Description: Write a function that prints a name.
+
    **Compilation:**
-   ```bash
+```bash
    gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-main.c 0-print_name.c -o a
 ```
   
@@ -22,8 +23,9 @@ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-array_iterator.c -o b
 
 3. **2-int_index.c**
    - Description: Write a function that searches for an integer.
-```bash
+
 **Compilation:**
+```bash
 gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 2-int_index.c -o c
 ```
 4. **3-op_functions.c**
