@@ -1,21 +1,23 @@
 #include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * op_add - Adds two integers
- * @a: First integer
- * @b: Second integer
+ * op_add - Add two numbers
+ * @a: First operand
+ * @b: Second operand
  *
  * Return: Sum of a and b
  */
 int op_add(int a, int b)
 {
-	return a + b;
+	return (a + b);
 }
 
 /**
- * op_sub - Subtracts two integers
- * @a: First integer
- * @b: Second integer
+ * op_sub - Subtract two numbers
+ * @a: First operand
+ * @b: Second operand
  *
  * Return: Difference of a and b
  */
@@ -25,9 +27,9 @@ int op_sub(int a, int b)
 }
 
 /**
- * op_mul - Multiplies two integers
- * @a: First integer
- * @b: Second integer
+ * op_mul - Multiply two numbers
+ * @a: First operand
+ * @b: Second operand
  *
  * Return: Product of a and b
  */
@@ -37,37 +39,35 @@ int op_mul(int a, int b)
 }
 
 /**
- * op_div - Divides two integers
- * @a: First integer
- * @b: Second integer
+ * op_div - Divide two numbers
+ * @a: First operand (numerator)
+ * @b: Second operand (denominator)
  *
- * Return: Result of the division of a by b
+ * Return: Result of division of a by b
  */
 int op_div(int a, int b)
 {
-	if (b != 0)
-		return (a / b);
-	else
+	if (b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
+	return (a / b);
 }
 
 /**
- * op_mod - Computes the remainder of the division of two integers
- * @a: First integer
- * @b: Second integer
+ * op_mod - Calculate the remainder of division of two numbers
+ * @a: First operand (dividend)
+ * @b: Second operand (divisor)
  *
- * Return: Remainder of the division of a by b
+ * Return: Remainder of division of a by b
  */
 int op_mod(int a, int b)
 {
-	if (b != 0)
-		return (a % b);
-	else
+	if (b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
+	return (a % b);
 }

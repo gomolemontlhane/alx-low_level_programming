@@ -2,33 +2,32 @@
 #include "function_pointers.h"
 
 /**
- * is_98 - check if a number is equal to 98
- * @elem: the integer to check
+ * is_98 - Check if a number is equal to 98
+ * @elem: The integer to check
  *
- * Return: 0 if false, something else otherwise.
+ * Return: 1 if true, 0 otherwise
  */
 int is_98(int elem)
 {
-	return (98 == elem);
+	return (elem == 98);
 }
 
 /**
- * is_strictly_positive - check if a number is greater than 0
- * @elem: the integer to check
+ * is_strictly_positive - Check if a number is greater than 0
+ * @elem: The integer to check
  *
- * Return: 0 if false, something else otherwise.
+ * Return: 1 if true, 0 otherwise
  */
 int is_strictly_positive(int elem)
 {
 	return (elem > 0);
 }
 
-
 /**
- * abs_is_98 - check if the absolute value of a number is 98
- * @elem: the integer to check
+ * abs_is_98 - Check if the absolute value of a number is 98
+ * @elem: The integer to check
  *
- * Return: 0 if false, something else otherwise.
+ * Return: 1 if true, 0 otherwise
  */
 int abs_is_98(int elem)
 {
@@ -36,7 +35,7 @@ int abs_is_98(int elem)
 }
 
 /**
- * main - check the code
+ * main - Check the code
  *
  * Return: Always 0.
  */
@@ -47,9 +46,12 @@ int main(void)
 
 	index = int_index(array, 20, is_98);
 	printf("%d\n", index);
+
 	index = int_index(array, 20, abs_is_98);
 	printf("%d\n", index);
+
 	index = int_index(array, 20, is_strictly_positive);
 	printf("%d\n", index);
+
 	return (0);
 }
