@@ -30,6 +30,6 @@ int main(void)
 	printf("- %d\n", n);
 	print_listint(head);
 	free_listint2(&head);
-	printf("%p\n", (void*) head);
+	printf("%p\n", (void *)head);
 	return (0);
 }
