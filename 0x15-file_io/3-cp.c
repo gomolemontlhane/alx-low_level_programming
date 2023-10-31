@@ -6,11 +6,12 @@
 /**
  *print_error - Prints an error message to the standard error.
  *@msg: The error message.
+ *@file: The filename causing the error.
  *@code: The exit code.
  */
-void print_error(const char *msg, int code)
+void print_error(const char *msg, const char *file, int code)
 {
-	dprintf(2, "%s\n", msg);
+	dprintf(2, "%s %s\n", msg, file);
 	exit(code);
 }
 
@@ -21,7 +22,7 @@ void print_error(const char *msg, int code)
 void close_file(int fd)
 {
 	if (close(fd) == -1)
-		print_error("Error: Can't close fd", 100);
+		print_error("Error: Can't close fd", "", 100);
 }
 
 /**
@@ -37,27 +38,27 @@ int main(int argc, char *argv[])
 	char buffer[1024];
 
 	if (argc != 3)
-		print_error("Usage: cp file_from file_to", 97);
+		print_error("Usage: cp file_from file_to", "", 97);
 
 	file_from = open(argv[1], O_RDONLY);
 	if (file_from == -1)
-		print_error("Error: Can't read from file", 98);
+		print_error("Error: Can't read from file", argv[1], 98);
 
 	file_to = open(
 			argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH
 			);
 	if (file_to == -1)
-		print_error("Error: Can't write to file", 99);
+		print_error("Error: Can't write to file", argv[2], 99);
 
 	while ((read_count = read(file_from, buffer, 1024)) > 0)
 	{
 		write_count = write(file_to, buffer, read_count);
 		if (write_count != read_count)
-			print_error("Error: Can't write to file", 99);
+			print_error("Error: Can't write to file", argv[2], 99);
 	}
 
 	if (read_count == -1)
-		print_error("Error: Can't read from file", 98);
+		print_error("Error: Can't read from file", argv[1], 98);
 
 	close_file(file_from);
 	close_file(file_to);

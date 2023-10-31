@@ -4,6 +4,8 @@
 
 /**
  *main - Check the code
+ *@ac: The argument count.
+ *@av: The argument vector.
  *
  *Return: Always 0.
  */
