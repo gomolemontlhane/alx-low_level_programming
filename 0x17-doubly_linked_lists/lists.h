@@ -17,11 +17,12 @@ typedef struct dlistint_s
 	struct dlistint_s *next;
 } dlistint_t;
 
-/*Function prototypes for Task 0, Task 1, Task 2, and Task 3 */
+/*Function prototypes for Task 0, Task 1, Task 2, Task 3, and Task 4 */
 size_t print_dlistint(const dlistint_t *h);
 size_t dlistint_len(const dlistint_t *h);
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
 dlistint_t *add_dnodeint(dlistint_t **head, const int n);
+void free_dlistint(dlistint_t *head);
 
 
 #endif /*LISTS_H */
