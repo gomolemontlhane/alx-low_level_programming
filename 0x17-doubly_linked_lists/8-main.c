@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- *main - Check the code
+ *main - check the code
  *
  *Return: Always EXIT_SUCCESS.
  */
