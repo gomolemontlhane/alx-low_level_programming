@@ -1,17 +1,8 @@
-# Makefile for Task 2
-
 CC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 
-all: $(NAME)
-
-$(NAME): $(OBJ)
-    $(CC) $(OBJ) -o $(NAME)
-
-%.o: %.c
-    $(CC) -c $< -o $@
-
-.PHONY: all
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 

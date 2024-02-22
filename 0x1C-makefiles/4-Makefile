@@ -1,5 +1,3 @@
-# Makefile for Task 4
-
 CC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
@@ -7,23 +5,16 @@ NAME = school
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-all: $(NAME)
-
-$(NAME): $(OBJ)
-    $(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-
-%.o: %.c
-    $(CC) $(CFLAGS) -c $< -o $@
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-    $(RM) *~ $(OBJ) $(NAME)
+	$(RM) *~ $(NAME)
 
 oclean:
-    $(RM) $(OBJ)
+	$(RM) $(OBJ)
 
 fclean: clean oclean
 
 re: fclean all
-
-.PHONY: all clean oclean fclean re
 
