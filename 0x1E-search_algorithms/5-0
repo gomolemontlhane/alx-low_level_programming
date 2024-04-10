@@ -1,0 +1,34 @@
+What is the space complexity (worst case) of a binary search in an array of size n?
+
+The space complexity of an algorithm refers to the additional memory space required by the algorithm to perform its operations, excluding the input data.
+
+For binary search:
+
+The space complexity primarily concerns the recursive (or iterative) implementation of the algorithm.
+In a typical binary search implementation (both iterative and recursive), the space complexity is O(1).
+Explanation:
+
+Binary search operates by iteratively or recursively narrowing down the search space, typically using a constant amount of additional memory for variables like left, right, and mid.
+Regardless of the size of the input array, the number of additional variables used remains constant throughout the execution of the binary search algorithm.
+The space complexity of O(1) indicates that the algorithm uses a fixed, constant amount of extra space, independent of the input size.
+Example:
+
+int binary_search(int *array, size_t size, int value)
+{
+    size_t left = 0;
+    size_t right = size - 1;
+
+    while (left <= right)
+    {
+        size_t mid = left + (right - left) / 2;
+
+        if (array[mid] == value)
+            return mid; // Found the value
+        else if (array[mid] < value)
+            left = mid + 1; // Search in the right half
+        else
+            right = mid - 1; // Search in the left half
+    }
+
+    return -1; // Value not found
+}
